@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import AboutMeNavbar from './AboutMeNavbar'
+import AboutMeNavbar from './ui/AboutMeNavbar'
 const AboutMe = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">

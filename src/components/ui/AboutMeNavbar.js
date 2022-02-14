@@ -4,7 +4,7 @@ import 'tw-elements'
 const AboutMeNavbar = () => {
   return (
     <div className="w-full flex flex-col items-center mt-4 rounded-xl m-2">
-      <div className="w-5/6 border-b border-transparent border-4 rounded-3xl border-gray-200 dark:border-gray-700 bg-indigo-900 flex justify-center">
+      <div className="w-5/6 border-b border-transparent rounded-3xl border-gray-200 dark:border-gray-700 bg-indigo-900 flex justify-center">
         <ul className="w-5/6 flex flex-wrap -mb-px justify-center">
           <li className="mr-2">
             <Link
@@ -15,7 +15,7 @@ const AboutMeNavbar = () => {
                 className="text-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-blue-400
                 text-center lg:text-right pb-2 "
                 >
-                HTML & CSS
+                Mi resumen
                 </p>
             </Link>
           </li>
@@ -29,7 +29,7 @@ const AboutMeNavbar = () => {
               className="text-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-400
             text-center lg:text-right pb-2 "
             >
-             JavaScript
+             JavaScript y otras Técnologias
             </p>
             </Link>
           </li>

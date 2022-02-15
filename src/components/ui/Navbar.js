@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../index.css'
+import jslogo from '../../images/jslogo.png'
 
 import pdf from '../../images/CurriculumAlanEscobedo.pdf'
 
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto w-5/6 bg-white p-3 rounded-xl">
         <Link to="/" className="flex">
           <img
-            src="/resources/jslogo.png"
+            src={jslogo}
             alt="JS Logo"
             className="w-8 h-8 mr-2"
           />

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Blogger_Sans';
+    src: local('Blogger_Sans'), url(./fonts/Blogger_Sans.otf) format('openType');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
+    .resume-text {
+        font-family: Blogger_Sans;
+        font-size: 1rem;
+    }
+
 .app{
     width: 100vw;
     height: 100vh;

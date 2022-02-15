@@ -10,7 +10,7 @@ import Tech from './components/aboutPages/Tech'
 const PortfolioRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<PortfolioApp />}>
+      <Route path="/portfolio" element={<PortfolioApp />}>
         <Route index element={<Home />} />
         <Route path="about"
           element={<AboutMe />}

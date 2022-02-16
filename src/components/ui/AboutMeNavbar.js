@@ -8,7 +8,7 @@ const AboutMeNavbar = () => {
         <ul className="w-5/6 flex flex-wrap -mb-px justify-center">
           <li className="mr-2">
             <Link
-              to="/about"
+              to="/portfolio/about"
               className="inline-block py-4 px-4 text-sm font-medium text-center text-gray-200 rounded-t-lg border-b-2 border-transparent hover:text-gray-400 hover:border-rose-300 dark:text-gray-400 dark:hover:text-gray-300 focus:text-rose-600 focus:border-blue-400"
             >
                 <p

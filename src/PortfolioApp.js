@@ -26,7 +26,6 @@ const PortfolioApp = () => {
       setBackgroundImage(backgroundContact)
     }
   }, [location])
-  console.log(location)
   return (
     <div className="app" style={{
       backgroundImage: `url(${backgroundImage})`,

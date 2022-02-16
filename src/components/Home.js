@@ -32,7 +32,7 @@ const Home = () => {
 
             <div className="flex mt-4 space-x-3 lg:mt-6">
               <Link
-                to="/about"
+                to="about"
                 className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 "
               >
                 Conoce mas sobre mi

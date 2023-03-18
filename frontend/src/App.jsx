@@ -1,9 +1,20 @@
+import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
+import { Navbar } from './components'
+import './index.css'
+import './App.scss';
+
 const App = () => {
   return (
-    <p>
-      Click on the Vite and React logos to learn more
-    </p>
+    <div className="app">
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

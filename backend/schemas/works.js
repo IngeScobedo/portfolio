@@ -8,7 +8,6 @@ export default {
         title: 'Title',
         type: 'string',
       },
-    
       {
         name: 'description',
         title: 'Description',
@@ -32,7 +31,6 @@ export default {
           hotspot: true,
         },
       },
-   
       {
         name: 'tags',
         title: 'Tags',
@@ -45,6 +43,10 @@ export default {
          }
        ]
       },
-     
+      {
+        name: 'attribution',
+        title: 'Attribution',
+        type: 'string',
+      }
     ],
   };

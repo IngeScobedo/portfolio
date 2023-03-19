@@ -19,9 +19,9 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know that<span> Good Dev</span>
+        Sé que un<span> Buen Desarrollo</span>
         <br />
-        means<span> Good Apps</span>
+        significa<span> Buenas Aplicaciones</span>
       </h2>
 
       <div className="app__profiles">
@@ -47,4 +47,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, 'about');
+export default AppWrap(About, 'sobre mi');

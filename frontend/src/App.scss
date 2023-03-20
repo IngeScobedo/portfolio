@@ -104,10 +104,11 @@
     flex-direction: column;
   
     padding: 1rem;
+    margin-bottom: 4rem;
   
-    div {
-      width: 40px;
-      height: 40px;
+    a {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background-color: var(--white-color);
       margin: 0.25rem 0;
@@ -120,8 +121,8 @@
       transition: all 0.3s ease-in-out;
   
       svg {
-        width: 15px;
-        height: 15px;
+        width: 35px;
+        height: 35px;
         color: var(--gray-color);
       }
   

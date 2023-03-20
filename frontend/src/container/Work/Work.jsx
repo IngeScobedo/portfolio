@@ -39,7 +39,7 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        My creative <span>portfolio</span> section
+        Proyectos y <span>aplicaciones</span> destacadas
       </h2>
       <div className="app__work-filter">
         {["MEAN", "MERN", "Node", "NestJS", "PHP", "Todos"].map(
@@ -88,7 +88,7 @@ const Work = () => {
                   </a>
                 )}
                 {work.codeLink && (
-                  <a href={work.projectLink} target="_blank" rel="norefer">
+                  <a href={work.codeLink} target="_blank" rel="norefer">
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}

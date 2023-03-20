@@ -19,7 +19,7 @@ const Skills = () => {
     client.fetch(query).then((data) => {
       console.log(
         "🚀 ~ file: Skills.jsx:20 ~ client.fetch ~ data:",
-        data[0].works
+        data
       );
       setExperiences(data);
     });
@@ -54,8 +54,8 @@ const Skills = () => {
         </motion.div>
 
         <motion.div className="app__skills-exp">
-          {experiences?.map((experience) => (
-            <motion.div className="app__skills-exp-item" key={experience.year}>
+          {experiences?.map((experience, i) => (
+            <motion.div className="app__skills-exp-item" key={`${i}-${experience.year}`}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>

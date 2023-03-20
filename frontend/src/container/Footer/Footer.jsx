@@ -39,7 +39,7 @@ const Footer = () => {
   };
   return (
     <>
-      <h2 className="head-text">Toma un café y contacta me.</h2>
+      <h2 className="head-text">Toma un café y contáctame.</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">
@@ -63,6 +63,7 @@ const Footer = () => {
             <input
               type="text"
               name="name"
+              id="name-input"
               className="p-text"
               placeholder="Tu Nombre"
               value={name}
@@ -73,6 +74,7 @@ const Footer = () => {
             <input
               type="text"
               name="email"
+              id="email-input"
               className="p-text"
               placeholder="Tu correo electronico"
               value={email}
@@ -82,7 +84,7 @@ const Footer = () => {
           <div>
             <textarea
               name='message'
-              id="message"
+              id="message-input"
               cols="30"
               rows="10"
               className="p-text"
@@ -91,7 +93,7 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
+          <button type="button" id="submit-button" className="p-text" onClick={handleSubmit}>
             {loading ? "Enviando..." : "Enviar mensaje"}
           </button>
         </div>

@@ -1,22 +1,28 @@
 import { useEffect, useState } from "react";
 import { client } from "../client";
 
-const useQuery = (query, defaultFilter = '', filter, condition) => {
+const useQuery = (query, defaultFilter = "", filter, condition) => {
   const [results, setResults] = useState([]);
   const [filteredResults, setFilteredResults] = useState([]);
 
   useEffect(() => {
     client.fetch(query).then((data) => {
-        setResults(data)
-        setFilteredResults(data)
+      setResults(data);
+      setFilteredResults(data);
     });
   }, []);
 
   useEffect(() => {
-    console.log('Effect useQUery filter: ', filter, condition);
-    filter !== defaultFilter
-        ? condition && setFilteredResults(results.filter(condition))
-        : setFilteredResults(results)
+    if (filter !== defaultFilter) {
+      condition &&
+        setTimeout(() => {
+          setFilteredResults(results.filter(condition));
+        }, 500);
+    } else {
+      setTimeout(() => {
+        setFilteredResults(results);
+      }, 500);
+    }
   }, [filter]);
 
   return filteredResults;

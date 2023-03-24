@@ -1,34 +1,18 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+import { urlFor } from "../../client";
 import "./Skills.scss";
+import useQuery from "../../hooks/useQuery";
+import { sanityQueries } from "../../constants";
 
 const Skills = () => {
-  const [experiences, setExperiences] = useState([]);
-  const [skills, setSkills] = useState([]);
+  const skills = useQuery(sanityQueries.skillsQuery)
+  const experiences = useQuery(sanityQueries.experienciesQuery)
 
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query).then((data) => {
-      console.log(
-        "🚀 ~ file: Skills.jsx:20 ~ client.fetch ~ data:",
-        data
-      );
-      setExperiences(data);
-    });
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-
-    console.log({ experiences, skills });
-  }, []);
   return (
     <>
       <h2 className="head-text">Habilidades y Experiencia</h2>

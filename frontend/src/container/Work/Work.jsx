@@ -6,34 +6,28 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import "./Work.scss";
+import { sanityQueries } from "../../constants";
+import useQuery from "../../hooks/useQuery";
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [works, setWorks] = useState([]);
-  const [filterWork, setFilterWork] = useState([]);
 
-  useEffect(() => {
-    const query = '*[_type == "works"]';
+  const works = useQuery(
+    sanityQueries.worksQuery,
+    'Todos',
+    activeFilter,
+    function (element) {
+      return element.tags.includes(activeFilter);
+    }
+  );
 
-    client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
-  }, []);
   const handleWorkFilter = (item) => {
-    console.log(item)
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
-
-      if (item === "Todos") {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
     }, 500);
   };
   return (
@@ -62,7 +56,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
+        {works.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt="work" />
@@ -120,7 +114,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, 'app__works'),
+  MotionWrap(Work, "app__works"),
   "trabajo",
-  'app__primarybg'
-  );
+  "app__primarybg"
+);

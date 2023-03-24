@@ -1,20 +1,14 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
+import { urlFor } from "../../client";
+import useQuery from "../../hooks/useQuery";
+import { sanityQueries } from '../../constants'
+
 import "./About.scss";
-import { urlFor, client } from "../../client";
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => setAbouts(data));
-
-    console.log(abouts);
-  }, []);
+  const abouts = useQuery(sanityQueries.aboutsQuery);
   return (
     <>
       <h2 className="head-text">
